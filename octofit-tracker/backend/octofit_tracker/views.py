@@ -11,7 +11,7 @@ def api_root(request, format=None):
     if request.method == 'POST':
         return Response({"message": "POST request received"}, status=status.HTTP_201_CREATED)
 
-    base_url = f"https://{settings.ALLOWED_HOSTS[2]}/"  # Use the codespace URL dynamically
+    base_url = 'https://redesigned-spork-g6pj46rr9hpp6x-8000.app.github.dev/'
     return Response({
         'users': base_url + 'api/users/?format=api',
         'teams': base_url + 'api/teams/?format=api',
